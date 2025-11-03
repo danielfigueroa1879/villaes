@@ -1,0 +1,851 @@
+.about-content div p {
+    text-align: justify;
+    font-weight: 200; /* Texto aún más ligero */
+}
+.footer-col p {
+    text-align: justify;
+    font-weight: 200; /* Texto aún más ligero */
+}
+/* Variables globales */
+:root {
+    --primary-color: #283593;
+    --secondary-color: #D4AF37;
+    --white: #ffffff;
+    --light-gray: #f5f5f5;
+    --dark-gray: #333333;
+}
+
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Base */
+body {
+    font-family: Roboto, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: var(--dark-gray);
+    line-height: 1.6;
+    font-weight: 200; /* Texto aún más ligero en general */
+}
+
+/* Justificación de texto para todos los párrafos */
+p {
+    text-align: justify;
+    font-weight: 200; /* Texto aún más ligero */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Cabecera */
+header {
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 60px;
+    margin-right: 10px;
+}
+
+.logo h1 {
+    font-size: 1.2rem;
+    margin: 0;
+    color: var(--white);
+}
+
+/* Navegación principal */
+nav {
+    margin-left: auto;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: var(--white);
+    text-decoration: none;
+    font-weight: 400; /* Menos negrita */
+    transition: color 0.3s;
+    padding: 8px 0;
+    display: block;
+}
+
+nav ul li a:hover {
+    color: var(--secondary-color);
+}
+
+/* Botón de menú móvil */
+.mobile-menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--white);
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 5px 10px;
+    z-index: 1001;
+}
+
+/* Sección Hero */
+.hero {
+    background: linear-gradient(rgba(40, 53, 147, 0.8), rgba(40, 53, 147, 0.8)), url('security-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    color: var(--white);
+    text-align: center;
+    padding: 150px 20px 100px;
+    margin-top: 80px;
+}
+
+.hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto 30px;
+}
+
+.btn {
+    display: inline-block;
+    background-color: var(--secondary-color);
+    color: var(--white);
+    padding: 12px 30px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 500; /* Reducido de 600 */
+    transition: background-color 0.3s;
+    border: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #b8960c;
+}
+
+/* Secciones Generales */
+section {
+    padding: 80px 0;
+}
+
+section:nth-child(even) {
+    background-color: var(--light-gray);
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-title h2 {
+    font-size: 2rem;
+    color: var(--primary-color);
+    position: relative;
+    display: inline-block;
+    padding-bottom: 15px;
+    font-weight: 400; /* Menos negrita para títulos principales */
+}
+
+.section-title h2:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background-color: var(--secondary-color);
+}
+
+/* Sección Servicios */
+.services {
+    padding: 80px 0;
+    background-color: var(--light-gray);
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.service-card {
+    background-color: var(--white);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+}
+
+.service-content {
+    padding: 20px;
+}
+
+.service-content h3 {
+    color: var(--primary-color);
+    margin-top: 0;
+    font-weight: 400; /* Menos negrita para títulos */
+}
+
+.service-content p {
+    text-align: justify;
+    font-weight: 200; /* Texto aún más ligero */
+}
+
+/* Sección Sobre Nosotros */
+.about {
+    padding: 80px 0;
+}
+
+.about-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+}
+
+.about-image img {
+    width: 100%;
+    height: auto; /* Mantener proporción */
+    max-width: 300px; /* Limitar tamaño máximo */
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    object-fit: contain; /* Asegurar que se vea la imagen completa */
+    display: block;
+    margin: 0 auto;
+}
+
+/* Sección Equipo - Centrado completo en PC y móvil */
+.team {
+    padding: 80px 0;
+    background-color: var(--light-gray);
+    text-align: center; /* Centrar toda la sección */
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.team-member {
+    background-color: var(--white);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.team-info {
+    padding: 20px;
+    text-align: center; /* Asegurar que el contenido esté centrado */
+}
+
+.team-info h3 {
+    margin-top: 0;
+    color: var(--primary-color);
+    font-weight: 400; /* Menos negrita para títulos */
+    text-align: center; /* Centrar los títulos */
+}
+
+.team-info p {
+    color: var(--secondary-color);
+    font-weight: 400; /* Menos negrita */
+    text-align: center; /* Centrar el texto amarillo */
+}
+
+/* Sección Testimonios */
+.testimonials {
+    padding: 80px 0;
+}
+
+.testimonial-slider {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.testimonial {
+    background-color: var(--white);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.testimonial p {
+    font-style: italic;
+    margin-bottom: 20px;
+    text-align: justify;
+    font-weight: 200; /* Texto aún más ligero */
+}
+
+.testimonial-author {
+    font-weight: 500; /* Reducido de 600 */
+    color: var(--primary-color);
+}
+
+/* Sección Galería */
+.gallery {
+    padding: 80px 0;
+    background-color: var(--light-gray);
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    height: 250px;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.1);
+}
+
+/* Sección Contacto */
+.contact {
+    padding: 80px 0;
+}
+
+.contact-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+.contact-info {
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 30px;
+    border-radius: 8px;
+}
+
+.contact-info h3 {
+    color: var(--secondary-color);
+    margin-top: 0;
+    font-weight: 400; /* Menos negrita */
+}
+
+.contact-detail {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.contact-detail i {
+    margin-right: 15px;
+    color: var(--secondary-color);
+    font-size: 1.2rem;
+}
+
+.contact-form {
+    background-color: var(--white);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 400; /* Menos negrita */
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-family: inherit;
+}
+
+.form-group textarea {
+    height: 150px;
+    resize: vertical;
+}
+
+.form-group input.error,
+.form-group textarea.error {
+    border-color: #f44336;
+}
+
+/* Sección Blog */
+.blog {
+    padding: 80px 0;
+    background-color: var(--light-gray);
+}
+
+.blog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.blog-card {
+    background-color: var(--white);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.blog-content {
+    padding: 20px;
+}
+
+.blog-content p {
+    text-align: justify;
+    font-weight: 200; /* Texto aún más ligero */
+}
+
+.blog-date {
+    color: var(--secondary-color);
+    font-weight: 400; /* Reducido de 500 */
+    margin-bottom: 10px;
+    display: block;
+}
+
+.blog-content h3 {
+    margin-top: 0;
+    color: var(--primary-color);
+    font-weight: 400; /* Menos negrita */
+}
+
+/* Pie de Página */
+footer {
+    background-color: var(--dark-gray);
+    color: var(--white);
+    padding: 50px 0 20px;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.footer-col h3 {
+    color: var(--secondary-color);
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+}
+
+.footer-col ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-col ul li {
+    margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+    color: var(--white);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-col ul li a:hover {
+    color: var(--secondary-color);
+}
+
+.social-links {
+    display: flex;
+    gap: 15px;
+}
+
+.social-links a {
+    display: inline-flex;
+    width: 40px;
+    height: 40px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+    transition: background-color 0.3s;
+}
+
+.social-links a:hover {
+    background-color: var(--secondary-color);
+}
+
+.copyright {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.copyright p {
+    text-align: center; /* Asegurar que el texto esté centrado */
+    width: 100%; /* Ocupar todo el ancho disponible */
+    margin: 0 auto; /* Centrar el bloque */
+}
+
+/* Botón de scroll hacia arriba - Solo para móvil */
+.scroll-to-top {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background-color: var(--primary-color);
+    color: var(--white);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 1000;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+    font-size: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.scroll-to-top:hover {
+    background-color: var(--secondary-color);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+}
+
+.scroll-to-top.show {
+    display: flex;
+    animation: fadeInUp 0.3s ease;
+}
+
+.scroll-to-top.hide {
+    animation: fadeOutDown 0.3s ease;
+}
+
+/* Solo mostrar en dispositivos móviles */
+@media (max-width: 768px) {
+    .scroll-to-top {
+        display: none; /* Se mostrará con JavaScript */
+    }
+}
+
+/* Asegurar que no aparezca en desktop */
+@media (min-width: 769px) {
+    .scroll-to-top {
+        display: none !important;
+    }
+}
+
+/* Animaciones para el botón */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeOutDown {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+}
+
+/* Ajustes para las imágenes de la galería en móvil */
+@media (max-width: 768px) {
+    .gallery-item {
+        height: 200px; /* Altura reducida en móvil */
+    }
+    
+    .gallery-item img {
+        object-fit: contain; /* Asegura que se vea la imagen completa */
+        padding: 10px; /* Añade un poco de espacio alrededor */
+    }
+}
+
+/* Media Queries - MENÚ MÓVIL MEJORADO */
+@media (max-width: 768px) {
+    .logo h1 {
+        font-size: 0.9rem;
+    }
+    
+    .mobile-menu-btn {
+        display: block;
+        transition: all 0.2s ease;
+    }
+    
+    .mobile-menu-btn:active {
+        transform: scale(0.95);
+    }
+    
+    nav {
+        position: static;
+    }
+    
+    /* Menú móvil mejorado con fondo más oscuro */
+    nav ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: rgba(40, 40, 60, 0.6); /* Fondo más oscuro y menos transparente */
+        padding: 0;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        z-index: 999;
+        backdrop-filter: blur(8px); /* Mayor efecto de desenfoque para el fondo */
+        -webkit-backdrop-filter: blur(8px); /* Para soporte en Safari */
+    }
+    
+    nav ul.show {
+        display: flex;
+        animation: fadeIn 0.2s ease-out;
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    }
+    
+    nav ul li {
+        margin: 0;
+        text-align: center;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.07); /* Líneas extremadamente sutiles */
+    }
+    
+    nav ul li:last-child {
+        border-bottom: none; /* Eliminar borde en el último elemento */
+    }
+    
+    nav ul li a {
+        padding: 15px;
+        display: block;
+        width: 100%;
+        transition: all 0.2s ease;
+        font-weight: 400; /* Menos negrilla en el menú móvil */
+        font-size: 1.1rem; /* Letra más grande en el menú hamburguesa */
+    }
+    
+    nav ul li a:hover {
+        background-color: rgba(255, 255, 255, 0.07);
+        color: var(--secondary-color);
+    }
+    
+    /* Overlay para cerrar el menú al hacer clic en cualquier parte */
+    .menu-overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: transparent;
+        z-index: 998;
+    }
+    
+    .menu-overlay.active {
+        display: block;
+    }
+    
+    .about-content,
+    .contact-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .about-image {
+        order: -1;
+    }
+    
+    .hero h2 {
+        font-size: 2rem;
+    }
+    
+    /* Ajustes para el header en móvil */
+    header {
+        padding: 20px 0; /* Banner azul marino más alto/ancho en móvil */
+    }
+    
+    .logo h1 {
+        font-size: 1.1rem; /* Título más pequeño específicamente en celular */
+    }
+    
+    /* Asegurar que en móvil siga siendo legible */
+    /* Texto general más pequeño y menos negrilla en móvil */
+    body {
+        font-size: 0.95rem;
+        font-weight: 300; /* Mantener peso 300 para móvil (mayor legibilidad) */
+    }
+    
+    p, .service-content p, 
+    .about-content div p, 
+    .testimonial p,
+    .blog-content p,
+    .footer-col p,
+    .contact-detail p {
+        font-size: 0.95rem;
+        font-weight: 300; /* Mantener peso 300 para móvil */
+    }
+    
+    /* Centrado de la sección equipo en móvil */
+    .team {
+        text-align: center;
+    }
+    
+    .team-info {
+        text-align: center;
+    }
+    
+    .team-info h3 {
+        text-align: center;
+    }
+    
+    .team-info p {
+        text-align: center;
+        font-weight: 400; /* Menos negrita */
+        font-size: 0.95rem;
+    }
+    
+    /* Ajustes para el texto del copyright en móvil */
+    .copyright p {
+        font-size: 0.75rem; /* Letra más pequeña en el copyright */
+        font-weight: 300;
+        text-align: center;
+        margin: 0 auto;
+        width: 100%;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero {
+        padding: 150px 20px 80px; /* Ajustado para el header más alto */
+        margin-top: 80px; /* Ajustado para el header más alto */
+    }
+    
+    .section-title h2 {
+        font-size: 1.8rem;
+    }
+    
+    .mobile-menu-btn {
+        font-size: 1.8rem;
+    }
+    
+    .logo img {
+        height: 50px;
+    }
+    
+    .logo h1 {
+        font-size: 0.9rem; /* Más pequeño para celulares muy pequeños */
+    }
+    
+    /* Texto aún más pequeño en celulares muy pequeños */
+    body {
+        font-size: 0.9rem;
+        font-weight: 300; /* Mantener peso 300 para móvil */
+    }
+    
+    p, .service-content p, 
+    .about-content div p, 
+    .testimonial p,
+    .blog-content p,
+    .team-info p,
+    .contact-detail p {
+        font-size: 0.9rem;
+        font-weight: 300; /* Mantener peso 300 para móvil */
+    }
+    
+    /* Copyright aún más pequeño en celulares muy pequeños */
+    .copyright p {
+        font-size: 0.7rem;
+        text-align: center;
+        margin: 0 auto;
+        width: 100%;
+    }
+    
+    /* Menú hamburguesa aún más grande en celulares muy pequeños */
+    nav ul li a {
+        font-size: 1.2rem;
+    }
+}
+
+/* Clases de utilidad */
+.text-center {
+    text-align: center;
+}
+
+.mb-2 {
+    margin-bottom: 20px;
+}
+
+.mt-2 {
+    margin-top: 20px;
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.fade-in {
+    animation: fadeIn 0.5s ease-in;
+}
